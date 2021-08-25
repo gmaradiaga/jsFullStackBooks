@@ -1,6 +1,6 @@
 class BookService {
   constructor() {
-    this.URI = '/api/books';
+    this.URI = `/api/books`;
   }
 
   async getBooks() {
@@ -9,15 +9,12 @@ class BookService {
     return books;
   }
 
-  getBook() {}
-
   async postBook(book) {
     const response = await fetch(this.URI, {
       method: 'POST',
       body: book,
     });
     const data = await response.json();
-    return data;
   }
 
   async deleteBook(id) {
@@ -31,5 +28,4 @@ class BookService {
   }
 }
 
-//module.exports = BookService;
 export default BookService;

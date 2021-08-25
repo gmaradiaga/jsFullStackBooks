@@ -1,4 +1,4 @@
-import BookService from './services/bookService';
+import BookService from './services/BookService';
 const bookService = new BookService();
 import { format } from 'timeago.js';
 
@@ -47,6 +47,7 @@ class UI {
 
   clearBookForm() {
     document.getElementById('book-form').reset();
+    document.getElementById('title').focus();
   }
 
   renderMessage(message, colorMessage, secondsToRemove) {
