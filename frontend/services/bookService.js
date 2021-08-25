@@ -1,6 +1,6 @@
 class BookService {
   constructor() {
-    this.URI = `/api/books`;
+    this.URI = '/api/books';
   }
 
   async getBooks() {
@@ -14,7 +14,7 @@ class BookService {
       method: 'POST',
       body: book,
     });
-    const data = await response.json();
+    await response.json();
   }
 
   async deleteBook(id) {
